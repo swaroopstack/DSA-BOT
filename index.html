@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSA Instructor Bot</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-icon">🧠</div>
+        <div class="logo-text">DSA Instructor</div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">About This Bot</div>
+        <div class="section-content">
+          I'm your <span class="highlight">Data Structures & Algorithms</span> instructor. Ask me anything about:
+          <ul>
+            <li>Arrays, Linked Lists, Trees, Graphs</li>
+            <li>Sorting & Searching algorithms</li>
+            <li>Dynamic Programming</li>
+            <li>Time & Space Complexity</li>
+            <li>LeetCode problem strategies</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">API Configuration</div>
+        <div class="api-input-group">
+          <input 
+            type="password" 
+            id="apiKeyInput" 
+            class="api-input" 
+            placeholder="Paste your Gemini API key..."
+          >
+          <button id="saveKeyBtn" class="save-btn">
+            <span>💾</span> Save Key
+          </button>
+        </div>
+        <a 
+          href="https://aistudio.google.com/app/apikey" 
+          target="_blank" 
+          class="api-link"
+        >
+          🔗 Get your free API key from Google AI Studio
+        </a>
+        <div class="key-status">
+          <div class="status-dot" id="statusDot"></div>
+          <span id="statusText">No API key saved</span>
+          <button id="clearKeyBtn" class="clear-btn">Clear</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Quick Tips</div>
+        <div class="section-content">
+          • Press <span class="highlight">Enter</span> to send your message<br>
+          • Use <span class="highlight">Shift + Enter</span> for new lines<br>
+          • Chat history is saved locally
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-area">
+      <div class="error-banner" id="errorBanner">
+        <span>⚠️</span>
+        <span id="errorText">Something went wrong</span>
+        <button class="close-error" onclick="hideError()">×</button>
+      </div>
+
+      <header class="chat-header">
+        <span>💬</span>
+        <h2>Chat</h2>
+        <span>•</span>
+        <span>Ask me about Data Structures & Algorithms</span>
+      </header>
+
+      <div class="messages-container" id="messagesContainer">
+        <div class="messages" id="messages">
+          <div class="empty-state" id="emptyState">
+            <div class="icon">🎯</div>
+            <h3>Ready to master DSA?</h3>
+            <p>Ask me anything about data structures, algorithms, or problem-solving strategies.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <div class="input-wrapper">
+          <textarea 
+            id="chatInput" 
+            class="chat-input" 
+            placeholder="Ask about arrays, trees, graphs, sorting, dynamic programming..." 
+            rows="1"
+          ></textarea>
+          <button id="sendBtn" class="send-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
