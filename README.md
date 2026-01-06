@@ -1,4 +1,4 @@
-DSA Instructor Chatbot
+#DSA Instructor Chatbot
 
 A simple chatbot that helps users learn Data Structures and Algorithms.
 
